@@ -1,4 +1,4 @@
-[Click Here to Play!](https://vinipickrodt.github.io/snake-ts/build/index.html).
+[Click Here to Play!](https://vinipickrodt.github.io/snake-ts/build/index.html)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
