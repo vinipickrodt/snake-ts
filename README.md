@@ -1,5 +1,12 @@
 [🎮 Click Here to Play the Game! 🎮](https://vinipickrodt.github.io/snake-ts/)
 
+## TODO
+- Implement two keys pressing command to fast direction changing.
+- Improve UI: Show messages for Play/Pause, Regression Counting (3, 2, 1, Go)
+- Implement some dificulty levels (Easy, Medium, Hard)
+
+## Build With React and TypeScript
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
