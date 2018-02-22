@@ -1,7 +1,7 @@
 {
   "name": "snake-game-ts",
   "version": "0.1.0",
-  "homepage": "https://vinipickrodt.github.com/ReacTSnake",
+  "homepage": "https://vinipickrodt.github.io/snake-ts/build/",
   "private": true,
   "dependencies": {
     "gh-pages": "^1.1.0",
@@ -13,8 +13,7 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "deploy": "react-scripts-ts deploy"
+    "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
     "@types/jest": "^22.1.2",
