@@ -2,10 +2,10 @@
 
 ## TODO
 - Implement two keys pressing command to fast direction changing.
-- Improve UI: Show messages for Play/Pause, Regression Counting (3, 2, 1, Go)
+- Improve UI: Show messages for Play/Pause, Regression Counting (3, 2, 1, Go) etc.
 - Implement some dificulty levels (Easy, Medium, Hard)
 
-## Build With React and TypeScript
+## Built With React and TypeScript
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
