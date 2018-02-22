@@ -106,6 +106,8 @@ export class SnakeGame extends React.Component<SnakeGameProps, SnakeGameState> {
         forbiddenDirections[Direction.Bottom] = Direction.Top;
 
         if (event.keyCode in directions) {
+            window.console.log(this.tickCounter + ':', event.keyCode);
+
             var direction = directions[event.keyCode];
             var forbiddenDirection = forbiddenDirections[this.state.actualDirection];
 
