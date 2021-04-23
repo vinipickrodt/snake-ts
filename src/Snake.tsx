@@ -7,7 +7,7 @@ interface SnakeGameProps {
 
 interface SnakeGameState {
     gameOver: boolean;
-    direction: Direction;
+    direction: Direction[];
     actualDirection: Direction;
     snakeX: number;
     snakeY: number;
@@ -60,7 +60,7 @@ export class SnakeGame extends React.Component<SnakeGameProps, SnakeGameState> {
         this.state = {
             gameOver: false,
             actualDirection: Direction.Right,
-            direction: Direction.Right,
+            direction: [Direction.Right],
             snakeX: Math.trunc(canvasSize / 2),
             snakeY: Math.trunc(canvasSize / 2),
             foodX: 0,
@@ -105,14 +105,18 @@ export class SnakeGame extends React.Component<SnakeGameProps, SnakeGameState> {
         forbiddenDirections[Direction.Top] = Direction.Bottom;
         forbiddenDirections[Direction.Bottom] = Direction.Top;
 
+        console.log('keyCode = ', event.keyCode);
+
+        const actualDirection = this.state.direction[this.state.direction.length - 1];
+
         if (event.keyCode in directions) {
             window.console.log(this.tickCounter + ':', event.keyCode);
 
             var direction = directions[event.keyCode];
-            var forbiddenDirection = forbiddenDirections[this.state.actualDirection];
+            var forbiddenDirection = forbiddenDirections[actualDirection];
 
             if (direction !== forbiddenDirection) {
-                this.state = Object.assign(this.state, { direction: direction });
+                this.state = Object.assign(this.state, { direction: [...this.state.direction, direction] });
             }
 
             event.preventDefault();
@@ -140,7 +144,7 @@ export class SnakeGame extends React.Component<SnakeGameProps, SnakeGameState> {
         var _foodY = this.state.foodY;
         var _tailSize = this.state.tailSize;
         var _tail = this.state.tail;
-        var direction = this.state.direction;
+        var direction = this.state.direction.length <= 1 ? this.state.direction[0] : this.state.direction.splice(0, 1)[0];
         var score = this.state.score;
 
         _tail.splice(0, 0, { x: _newSnakeX, y: _newSnakeY });
