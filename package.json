@@ -15,7 +15,8 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "foo": "echo 'foo script executed'"
   },
   "devDependencies": {
     "@types/jest": "^22.1.2",
